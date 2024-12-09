@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            background-color: #121212; 
+            margin: 0; 
+        }
+        .login-container { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            background-color: #121212; 
+        }
+        .login-box { 
+            width: 300px; 
+            padding: 20px; 
+            border: 1px solid #333; 
+            border-radius: 8px; 
+            background-color: #1f1f1f; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+            text-align: center; 
+        }
+        .login-box input[type="text"], .login-box input[type="password"] { 
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #333; 
+            border-radius: 20px; 
+            background-color: #1f1f1f; 
+            color: #e0e0e0; 
+            margin-bottom: 10px; 
+        }
+        .login-box button { 
+            width: 100%; 
+            padding: 10px; 
+            border: none; 
+            background-color: #007bff; 
+            color: white; 
+            border-radius: 20px; 
+            cursor: pointer; 
+            transition: background-color 0.3s; 
+        }
+        .login-box button:hover { 
+            background-color: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <input type="text" id="usernameInput" placeholder="Enter your name...">
+            <input type="password" id="passwordInput" placeholder="Enter password...">
+            <button onclick="checkLogin()">Login</button>
+        </div>
+    </div>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <!-- اینجا بخش چت شما قرار می‌گیرد -->
+    </div>
+
+    <script>
+        function checkLogin() {
+            const username = document.getElementById('usernameInput').value;
+            const password = document.getElementById('passwordInput').value;
+            if (password === 'iran@') {
+                // هدایت به لینک مشخص
+                window.location.href = 'https://aradaraste.github.io/chateweb/'; // اینجا لینک خودتان را قرار دهید
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
